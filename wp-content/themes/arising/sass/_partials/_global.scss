@@ -2,6 +2,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  &,
   &:before,
   &:after {
     @include box-sizing(inherit);
@@ -19,4 +20,12 @@
 html {
   font-size: 62.5%;
   @include box-sizing(border-box);
+}
+
+.wf-loading {
+  visibility: hidden;
+}
+
+.wf-active {
+  visibility: visible;
 }

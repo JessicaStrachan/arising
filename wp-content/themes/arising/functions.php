@@ -8,6 +8,8 @@ function style_script_includes() {
   wp_enqueue_script('modernizr');
   wp_register_script('selectivizr', '//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js', '', '1.0.2', true);
   wp_enqueue_script('selectivizr');
+  wp_register_script('webfont_loader', $template_uri . '/js/webfont_loader.js', '', '');
+  wp_enqueue_script('webfont_loader');
   wp_register_style('theme_style', get_stylesheet_uri());
   wp_enqueue_style('theme_style');
 }
