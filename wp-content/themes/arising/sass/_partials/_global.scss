@@ -1,0 +1,22 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:before,
+  &:after {
+    @include box-sizing(inherit);
+  }
+
+  @include input-placeholder {
+    @include transition(color .3s ease);
+  }
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  @include box-sizing(border-box);
+}
