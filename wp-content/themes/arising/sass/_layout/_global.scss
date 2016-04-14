@@ -31,19 +31,13 @@ html {
 }
 
 h1 {
-  font-family: $title-font-family;
+  font-family: $_abril-fatface;
 }
 
 h4 {
   font-family: $sub-title-font-family;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 p {
-  color: $font-color;
+  font-family: $_roboto-slab;
 }
