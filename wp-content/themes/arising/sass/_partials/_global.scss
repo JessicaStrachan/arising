@@ -29,3 +29,21 @@ html {
 .wf-active {
   visibility: visible;
 }
+
+h1 {
+  font-family: $title-font-family;
+}
+
+h4 {
+  font-family: $sub-title-font-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: $font-color;
+}
