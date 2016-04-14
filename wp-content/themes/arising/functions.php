@@ -27,6 +27,19 @@ spl_autoload_register('autoload_classes');
 if(function_exists('__autoload')) {
   spl_autoload_register('__autoload');
 }
+
+spl_autoload_register('autoload_classes');
+if(function_exists('__autoload')) {
+  spl_autoload_register('__autoload');
+}
+function include_additional_files() {
+  $template_url = get_template_directory();
+  if(is_admin()) {
+    require_once $template_url . '/includes/cmb2-custom-metaboxes.php';
+  }
+}
+add_action('init', 'include_additional_files', 1);
+
 function add_ie_xua_header() {
   if(isset($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false)) {
     header('X-UA-Compatible: IE=edge,chrome=1');
