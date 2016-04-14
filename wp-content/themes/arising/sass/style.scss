@@ -10,9 +10,10 @@
 @import "compass";
 @import "compass/reset";
 
-@import "_partials/global";
 @import "_partials/mixins";
+@import "_partials/global";
 @import "_partials/variables";
 @import "_partials/wordpress-core";
 
+@import "_layout/header";
 @import "_layout/gridz";
