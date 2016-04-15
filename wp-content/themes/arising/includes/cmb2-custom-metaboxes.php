@@ -14,6 +14,6 @@ if(file_exists(__DIR__ . '/CMB2/init.php')) {
   require_once __DIR__ . '/CMB2/init.php';
 }
 function cmb2_exst_metaboxes() {
-  $prefix = '_exst_cmb2_';
+  $prefix = '_arising_cmb2_';
 }
-add_action('cmb2_init', 'cmb2_exst_metaboxes');
+add_action('cmb2_init', 'cmb2_arising_metaboxes');
