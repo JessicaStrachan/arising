@@ -1,21 +1,32 @@
 .categories-section {
   @include display-flex;
   @include justify-content(space-between);
-  height: 250px;
+  height: 300px;
   width: 100%;
 
-  .categories-block {
+  .categories-block-1,
+  .categories-block-2,
+  .categories-block-3 {
+    @include font-size(3);
+    color: $_white;
+    position: relative;
+    text-align: center;
     width: 33.333%;
 
-    .category-image {
-      @include font-size(3);
-      background-image: image-url('castle-bavarian.jpg');
-      background-position: center center;
-      color: $_white;
-      height: 50%;
-      padding: 120px;
-      text-align: center;
-      width: 100%;
+    h1 {
+      @include absolute-center(absolute);
     }
+  }
+
+  .categories-block-1 {
+    background-color: $categories-background-yellow;
+  }
+
+  .categories-block-2 {
+    background-color: $categories-background-grey;
+  }
+
+  .categories-block-3 {
+    background-color: $categories-background-yellow;
   }
 }
