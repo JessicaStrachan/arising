@@ -41,3 +41,13 @@ h4 {
 p {
   font-family: $_roboto-slab;
 }
+
+@include keyframes(FadeIn) {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

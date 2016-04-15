@@ -4,10 +4,10 @@
   height: 300px;
   width: 100%;
 
-  .categories-block-1,
-  .categories-block-2,
-  .categories-block-3 {
+  .categories-block {
     @include font-size(3);
+    border-bottom: 1px $categories-border-grey solid;
+    border-right: 1px $categories-border-grey solid;
     color: $_white;
     position: relative;
     text-align: center;
@@ -16,17 +16,23 @@
     h1 {
       @include absolute-center(absolute);
     }
-  }
 
-  .categories-block-1 {
-    background-color: $categories-background-yellow;
-  }
+    &:nth-child(odd) {
+      @include transition(background-color .4s);
+      background-color: $categories-background-yellow;
+    }
 
-  .categories-block-2 {
-    background-color: $categories-background-grey;
-  }
+    &:nth-child(even) {
+      @include transition(background-color .4s);
+      background-color: $categories-background-grey;
+    }
 
-  .categories-block-3 {
-    background-color: $categories-background-yellow;
+    &:hover:nth-child(odd) {
+      background-color: $categories-background-yellow-hover;
+    }
+
+    &:hover:nth-child(even) {
+      background-color: $categories-background-grey-hover;
+    }
   }
 }
