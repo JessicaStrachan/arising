@@ -17,25 +17,39 @@ add_action('wp_enqueue_scripts', 'style_script_includes');
 add_theme_support('html5', ['comment-list', 'comment-form', 'search-form']);
 add_theme_support('automatic-feed-links');
 add_theme_support('post-thumbnails');
+
 function autoload_classes($name) {
-  $class_path = get_template_directory() . '/includes/class.' . strtolower($name) . '.php';
+  $template_directory = get_template_directory();
+
+   $class_name = strtolower(
+     implode(
+       '-',
+       preg_split('/(?=[A-Z])/', $name, -1, PREG_SPLIT_NO_EMPTY)
+     )
+   );
+
+   $class_path = $template_directory . '/includes/class.'
+                 . $class_name . '.php';
   if(file_exists($class_path)) {
     require_once $class_path;
   }
-}
-spl_autoload_register('autoload_classes');
-if(function_exists('__autoload')) {
-  spl_autoload_register('__autoload');
+
+  $lib_class_name = $template_directory . '/includes/class.'
+                    . strtolower($name) . '.php';
+
+  if(file_exists($lib_class_name)) require_once($lib_class_name);
 }
 
 spl_autoload_register('autoload_classes');
 if(function_exists('__autoload')) {
   spl_autoload_register('__autoload');
 }
+
 function include_additional_files() {
   $template_url = get_template_directory();
   if(is_admin()) {
     require_once $template_url . '/includes/cmb2-custom-metaboxes.php';
+    require_once $template_url . '/includes/class.arising_admin.php';
   }
 }
 add_action('init', 'include_additional_files', 1);
