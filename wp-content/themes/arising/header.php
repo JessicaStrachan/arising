@@ -11,13 +11,15 @@
 <body <?php body_class(); ?>>
 
 <section class="header">
-  <div class="logo" href="#"></div>
-  <div class="title">
-    <h1>Practicing PHP & CMB2 for Wordpress</h1>
-    <h4>By Jessica Strachan</h4>
+  <div class="header-name">
+      <h2>Jessica Strachan</h2>
   </div>
-  <div class="social-media">
-    <h1>F</h1>
-    <h1>T</h1>
+  <div class="header-social-media">
+      <ul>
+          <li><a href="#">Github</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+      </ul>
   </div>
 </section>

@@ -30,12 +30,29 @@ html {
   visibility: visible;
 }
 
-h1 {
-  font-family: $_abril-fatface;
+body {
+  background-color: $aubergine;
+  border-left: 40px solid $white;
+  border-right: 40px solid $white;
+
+  &:before,
+  &:after {
+    background-color: $white;
+    content: '';
+    height: 40px;
+    left: 0;
+    position: absolute;
+    right: 0;
+
+  }
 }
 
-h4 {
-  font-family: $sub-title-font-family;
+h2 {
+  font-size: 30px;
+}
+
+li {
+  text-decoration: none;
 }
 
 p {
