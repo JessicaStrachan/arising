@@ -1,3 +1,7 @@
+<?php
+$title = $this->field('date');
+?>
+
 <section class="on-this-day">
   <div class="wrapper">
     <div class="left-content">
