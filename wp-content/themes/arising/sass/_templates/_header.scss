@@ -1,14 +1,15 @@
 .header {
   border-bottom: 1px solid $finn;
-  height: 50px;
   margin: 0 40px;
-  padding: 40px 0;
+  padding: 40px 0 30px;
 
-  &-name {
+  &-name h2 {
     color: $white;
   }
 
   &-social-media {
+    padding-top: 20px;
+
     ul {
       display: flex;
       flex-direction: row;
@@ -16,8 +17,17 @@
       justify-content: space-between;
       text-transform: uppercase;
       width: 280px;
+    }
 
-      li:after {
+    li {
+      color: $white;
+
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+
+      &::after {
         color: $white;
         content: '//';
         padding: 5px;

@@ -1,16 +1,26 @@
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+%page-border {
+  background-color: $white;
+  content: '';
+  height: 40px;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
 
-  &,
-  &:before,
-  &:after {
-    @include box-sizing(inherit);
-  }
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 
   @include input-placeholder {
     @include transition(color .3s ease);
   }
+
+  &,
+  &::before,
+  &::after {
+    @include box-sizing(inherit);
+  }
+
 
   &:focus::-webkit-input-placeholder {
     color: transparent;
@@ -18,8 +28,12 @@
 }
 
 html {
-  font-size: 62.5%;
   @include box-sizing(border-box);
+  font-size: 62.5%;
+
+  &::before {
+    @extend %page-border;
+  }
 }
 
 .wf-loading {
@@ -34,16 +48,10 @@ body {
   background-color: $aubergine;
   border-left: 40px solid $white;
   border-right: 40px solid $white;
+  padding-top: 40px;
 
-  &:before,
-  &:after {
-    background-color: $white;
-    content: '';
-    height: 40px;
-    left: 0;
-    position: absolute;
-    right: 0;
-
+  &::after {
+    @extend %page-border;
   }
 }
 
