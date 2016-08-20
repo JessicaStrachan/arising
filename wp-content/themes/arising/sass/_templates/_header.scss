@@ -1,44 +1,37 @@
 .header {
-  @include display-flex;
-  @include justify-content(space-between);
-  height: 180px;
-  padding: 40px;
-  width: 100%;
+  border-bottom: 1px solid $finn;
+  margin: 0 40px;
+  padding: 40px 0 30px;
 
-  .title {
-    @include font-size(1.8);
+  &-name h2 {
+    color: $white;
+  }
+
+  &-social-media {
     padding-top: 20px;
-    text-align: center;
-    width: 180px;
 
-    h4 {
-      padding-top: 10px;
+    ul {
+      display: flex;
+      flex-direction: row;
+      font-size: 12px;
+      justify-content: space-between;
+      text-transform: uppercase;
+      width: 280px;
     }
-  }
 
-  .social-media {
-    @include display-flex;
-    @include flex-direction(row);
-    @include justify-content(space-between);
-    @include font-size(2.5);
-    width: 100px;
-  }
-}
+    li {
+      color: $white;
 
-.logo {
-  height: 100px;
-  position: relative;
-  width: 100px;
+      a {
+        color: $white;
+        text-decoration: none;
+      }
 
-  &::after {
-    background-image: image-url('j-logo-small.png');
-    background-repeat: no-repeat;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+      &::after {
+        color: $white;
+        content: '//';
+        padding: 5px;
+      }
+    }
   }
 }
