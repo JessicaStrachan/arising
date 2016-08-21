@@ -53,6 +53,7 @@
 
   .menu-icon {
     @include vertical-center(absolute);
+    cursor: pointer;
     height: 30px;
     right: 0;
     width: 35px;
@@ -60,11 +61,15 @@
     &__bars {
       @extend %menu-bars;
       @include vertical-center(absolute);
+      @include transition(background $global-transition-timing,
+                          transform $global-transition-timing,
+                          height $global-transition-timing);
     }
 
     &::before,
     &::after {
       @extend %menu-bars;
+      @include transition(transform $global-transition-timing);
       position: absolute;
     }
 
@@ -74,6 +79,16 @@
 
     &::after {
       bottom: 0;
+    }
+  }
+
+  .menu-icon:hover {
+    &::before {
+      @include translateY(-2px);
+    }
+
+    &::after {
+      @include translateY(2px);
     }
   }
 }
