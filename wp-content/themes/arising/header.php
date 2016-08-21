@@ -22,7 +22,17 @@
           <li><a href="#">Pinterest</a></li>
       </ul>
   </div>
-  <div class="menu-icon">
+  <div class="menu-icon js-menu-icon">
       <span class="menu-icon__bars"></span>
   </div>
 </section>
+
+<nav class="nav-menu js-nav-menu">
+    <ul>
+        <li class="nav-menu__item"><a href="#">Home</a></li>
+        <li class="nav-menu__item"><a href="#">Portfolio</a></li>
+        <li class="nav-menu__item"><a href="#">Blog</a></li>
+        <li class="nav-menu__item"><a href="#">Book Reviews</a></li>
+        <li class="nav-menu__item"><a href="#">Contact</a></li>
+    </ul>
+</nav>
