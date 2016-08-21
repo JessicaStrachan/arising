@@ -22,4 +22,7 @@
           <li><a href="#">Pinterest</a></li>
       </ul>
   </div>
+  <div class="menu-icon">
+      <span class="menu-icon__bars"></span>
+  </div>
 </section>

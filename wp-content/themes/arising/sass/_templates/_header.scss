@@ -1,7 +1,16 @@
+%menu-bars {
+  background-color: $white;
+  content: '';
+  display: block;
+  height: 2px;
+  width: 35px;
+}
+
 .header {
   border-bottom: 1px solid $finn;
   margin: 0 40px;
   padding: 40px 0 30px;
+  position: relative;
 
   &-name h2 {
     color: $white;
@@ -39,6 +48,32 @@
       &::after {
         display: none;
       }
+    }
+  }
+
+  .menu-icon {
+    @include vertical-center(absolute);
+    height: 30px;
+    right: 0;
+    width: 35px;
+
+    &__bars {
+      @extend %menu-bars;
+      @include vertical-center(absolute);
+    }
+
+    &::before,
+    &::after {
+      @extend %menu-bars;
+      position: absolute;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
     }
   }
 }
