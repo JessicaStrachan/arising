@@ -1,5 +1,6 @@
 %menu-bars {
   background-color: $white;
+  content: '';
   display: block;
   height: 2px;
   width: 35px;
@@ -59,13 +60,11 @@
     &__bars {
       @extend %menu-bars;
       @include vertical-center(absolute);
-      content: '';
     }
 
     &::before,
     &::after {
       @extend %menu-bars;
-      content: '';
       position: absolute;
     }
 
