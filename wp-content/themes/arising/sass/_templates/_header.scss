@@ -57,6 +57,7 @@
     height: 30px;
     right: 0;
     width: 35px;
+    z-index: 200;
 
     &__bars {
       @extend %menu-bars;
@@ -70,6 +71,7 @@
     &::after {
       @extend %menu-bars;
       @include transition(transform $global-transition-timing);
+      content: '';
       position: absolute;
     }
 
@@ -93,15 +95,15 @@
   }
 
   .menu-icon.active {
-    &__bars {
+    span {
       @include transform(rotate(-180deg));
-      background: transparent;
+      opacity: 0;
     }
 
     &::before,
     &::after {
       height: 2px;
-      top: 0;
+      top: 12px;
     }
 
     &::before {
