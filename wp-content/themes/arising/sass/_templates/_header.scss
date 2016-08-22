@@ -71,6 +71,7 @@
     &::after {
       @extend %menu-bars;
       @include transition(transform $global-transition-timing);
+      content: '';
       position: absolute;
     }
 
@@ -102,7 +103,7 @@
     &::before,
     &::after {
       height: 2px;
-      top: 0;
+      top: 12px;
     }
 
     &::before {
