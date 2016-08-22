@@ -7,6 +7,7 @@
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico">
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab|Raleway' rel='stylesheet' type='text/css'>
   <?php wp_head(); ?>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/menu.js"></script>
 </head>
 <body <?php body_class(); ?>>
 

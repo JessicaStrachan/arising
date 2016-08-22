@@ -1,5 +1,5 @@
 .nav-menu {
-  background-color: pink;
+  background-color: $aubergine;
   font-family: $nav-font;
   font-size: 50px;
   font-weight: 900;
@@ -12,12 +12,15 @@
   width: 100%;
 
   ul {
+    @include vertical-center(relative);
     display: flex;
     flex-direction: column;
+    height: 500px;
     justify-content: space-between;
 
     li {
-      opacity: 0;
+      opacity: 1;
+      text-align: center;
       transform: translate(0, 50px);
 
       a {
