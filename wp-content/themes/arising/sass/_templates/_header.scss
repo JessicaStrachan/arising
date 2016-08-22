@@ -57,6 +57,7 @@
     height: 30px;
     right: 0;
     width: 35px;
+    z-index: 200;
 
     &__bars {
       @extend %menu-bars;
@@ -93,9 +94,9 @@
   }
 
   .menu-icon.active {
-    &__bars {
+    span {
       @include transform(rotate(-180deg));
-      background: transparent;
+      opacity: 0;
     }
 
     &::before,
