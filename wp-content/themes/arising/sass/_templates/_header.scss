@@ -91,4 +91,25 @@
       @include translateY(2px);
     }
   }
+
+  .menu-icon.active {
+    &__bars {
+      @include transform(rotate(-180deg));
+      background: transparent;
+    }
+
+    &::before,
+    &::after {
+      height: 2px;
+      top: 0;
+    }
+
+    &::before {
+      @include transform(rotate(135deg));
+    }
+
+    &::after {
+      @include transform(rotate(-135deg));
+    }
+  }
 }
