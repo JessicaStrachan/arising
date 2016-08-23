@@ -7,7 +7,6 @@
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico">
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab|Raleway' rel='stylesheet' type='text/css'>
   <?php wp_head(); ?>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/menu.js"></script>
 </head>
 <body <?php body_class(); ?>>
 
@@ -30,10 +29,10 @@
 
 <nav class="nav-menu js-nav-menu">
     <ul>
-        <li class="nav-menu__item"><a href="#">Home</a></li>
-        <li class="nav-menu__item"><a href="#">Portfolio</a></li>
-        <li class="nav-menu__item"><a href="#">Blog</a></li>
-        <li class="nav-menu__item"><a href="#">Book Reviews</a></li>
-        <li class="nav-menu__item"><a href="#">Contact</a></li>
+        <li class="nav-menu__item"><a href="#"><span data-hover="Home">Home</span></a></li>
+        <li class="nav-menu__item"><a href="#"><span data-hover="Portfolio">Portfolio</span></a></li>
+        <li class="nav-menu__item"><a href="#"><span data-hover="Blog">Blog</span></a></li>
+        <li class="nav-menu__item"><a href="#"><span data-hover="Book Reviews">Book Reviews</span></a></li>
+        <li class="nav-menu__item"><a href="#"><span data-hover="Contact">Contact</span></a></li>
     </ul>
 </nav>

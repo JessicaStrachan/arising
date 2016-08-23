@@ -21,13 +21,15 @@
     justify-content: space-between;
     padding: 180px 0;
 
-    li {
+    .nav-menu-item {
       opacity: 1;
       text-align: center;
 
       a {
-        color: $white;
+        overflow: hidden;
         text-decoration: none;
+
+
       }
     }
   }
@@ -40,4 +42,31 @@
       opacity: 1;
     }
   }
+}
+
+.nav-menu a {
+  height: 1em;
+  overflow: hidden;
+	padding: 0 4px;
+}
+
+.nav-menu a span {
+  @include transition(transform .3s);
+  color: $white;
+  display: inline-block;
+  position: relative;
+}
+
+.nav-menu a span::before {
+  @include transform(translate3d(0, 0, 0));
+  color: $white;
+  content: attr(data-hover);
+  font-weight: 700;
+  position: absolute;
+  top: 100%;
+}
+
+.nav-menu a:hover span,
+.nav-menu a:focus span {
+  @include transform(translateY(-100%));
 }

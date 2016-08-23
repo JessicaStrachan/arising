@@ -10,3 +10,5 @@
     </footer>
   </div>
 </section>
+
+<?php get_footer();
