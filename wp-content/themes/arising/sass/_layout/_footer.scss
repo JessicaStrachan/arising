@@ -1,0 +1,45 @@
+.footer {
+  height: 200px;
+  margin: 40px;
+  position: relative;
+
+  .footer-wrapper {
+    @include absolute-center(absolute);
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+    justify-content: space-between;
+    text-align: center;
+    width: 350px;
+
+    &__contact,
+    &__social {
+      a {
+        color: $chicago;
+        font-family: $link-font;
+        text-decoration: none;
+      }
+    }
+
+    &__contact {
+      font-size: 16px;
+    }
+
+    &__social {
+      display: flex;
+      font-size: 20px;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    &__copyright {
+      color: $chicago;
+      font-size: 12px;
+      position: relative;
+
+      p {
+        font-family: $link-font;
+      }
+    }
+  }
+}
