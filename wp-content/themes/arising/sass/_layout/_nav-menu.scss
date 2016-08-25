@@ -1,43 +1,62 @@
-.nav-menu {
+.nav-menu__container {
   background-color: $aubergine;
-  font-family: $nav-font;
-  font-size: 50px;
-  font-weight: 900;
   height: 100vh;
   left: 0;
   opacity: 0;
-  overflow: hidden;
   position: fixed;
   top: 0;
   transform: translate(0, 100%);
   width: 100vw;
   z-index: 100;
 
-  ul {
-    @include vertical-center(relative);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-    padding: 180px 0;
-
-    li {
-      opacity: 1;
-      text-align: center;
-
-      a {
-        color: $white;
-        text-decoration: none;
-      }
-    }
-  }
-
   &.active {
     opacity: 1;
     transform: translate(0);
 
-    &.nav-menu__item {
+    &.nav-menu {
       opacity: 1;
+    }
+  }
+}
+
+.nav-menu {
+  @include absolute-center(absolute);
+  display: flex;
+  flex-direction: column;
+  font-family: $nav-font;
+  font-size: 50px;
+  font-weight: 500;
+  justify-content: space-between;
+  overflow: hidden;
+  text-align: center;
+
+  a {
+    height: 50px;
+    margin: 20px 0;
+    overflow: hidden;
+    padding: 0 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    span {
+      @include transition(transform .3s);
+      color: $finn;
+      display: inline-block;
+      position: relative;
+    }
+
+    span::before {
+      @include transform(translate3d(0, 0, 0));
+      color: $finn;
+      content: attr(data-hover);
+      font-weight: 700;
+      position: absolute;
+      top: 100%;
+    }
+
+    &:hover span,
+    &:focus span {
+      @include transform(translateY(-100%));
     }
   }
 }
