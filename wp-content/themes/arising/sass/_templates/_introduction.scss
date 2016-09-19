@@ -16,7 +16,24 @@
 
   a {
     color: $finn;
-    line-height: 50px;
+    position: relative;
     text-decoration: none;
+
+    &::before {
+      @include transition(max-width .5s);
+      color: #fff;
+      content: attr(data-hover);
+      height: 70px;
+      left: 0;
+      max-width: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 5px;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      max-width: 100%;
+    }
   }
 }
