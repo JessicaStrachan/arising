@@ -13,12 +13,12 @@ if(have_posts()): while(have_posts()): the_post();
 ?>
 <div class="single--post__wrapper">
   <section class="page--title">
-      <h1><?php echo the_title(); ?></h1>
+    <h1><?php echo the_title(); ?></h1>
   </section>
   <div class="featured--image" style="<?php echo $featured_image; ?>"></div>
   <article>
-      <?php if($content); ?>
-        <p><?php echo the_content(); ?></p>
+    <?php if($content); ?>
+    <p><?php echo the_content(); ?></p>
   </article>
 </div>
 

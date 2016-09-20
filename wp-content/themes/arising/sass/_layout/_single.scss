@@ -1,24 +1,25 @@
 .single--post__wrapper {
   margin: 0 40px;
   padding: 40px 0;
-}
 
-.page--title {
-  padding-bottom: 20px;
-  h1 {
-    color: $finn;
-    font-size: 66px;
-    font-weight: 900;
+  .page--title {
+    padding-bottom: 20px;
+
+    h1 {
+      color: $finn;
+      font-size: 66px;
+      font-weight: 900;
+    }
   }
-}
 
-p {
-  color: $white;
-}
+  .featured--image {
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+  }
 
-.featured--image {
-  background-position: center center;
-  background-size: cover;
-  height: 200px;
-  width: 200px;
+  article p {
+    color: $white;
+  }
 }
