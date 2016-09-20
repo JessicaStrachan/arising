@@ -1,0 +1,26 @@
+.book-review__listing {
+  @include horizontal-center(relative);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 40px 0;
+
+  &--item {
+    a {
+      color: $finn;
+      font-family: $_raleway;
+      font-size: 25px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .listing--image {
+      background-position: center center;
+      background-size: cover;
+      height: 360px;
+      margin: 20px 20px 20px 0;
+      width: 240px;
+    }
+  }
+}

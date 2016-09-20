@@ -15,3 +15,10 @@
 p {
   color: $white;
 }
+
+.featured--image {
+  background-position: center center;
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+}
