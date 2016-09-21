@@ -24,7 +24,9 @@ $featured_image = $post_image ?
 
 <article class="book-review__listing--item">
   <a href="<?php the_permalink(); ?>"><?php the_title(); ?>
+    <h2 class="author"><?php echo get_the_terms(get_the_ID(), 'author')[0]->name; ?></h2>
     <div class="listing--image" style="<?php echo $featured_image; ?>"></div>
+    <?php the_excerpt(); ?>
   </a>
 </article>
 
