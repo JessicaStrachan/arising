@@ -55,6 +55,10 @@ body {
   }
 }
 
+.page-wrapper {
+  padding: 40px;
+}
+
 h1,
 h2,
 h3,
@@ -66,6 +70,12 @@ h5 {
 h2 {
   font-size: 30px;
   font-weight: 900;
+}
+
+.page-title {
+  color: $finn;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 li {

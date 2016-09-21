@@ -8,7 +8,10 @@ $loop = new WP_Query( array('post_type' => 'book_review') );
 get_header();
 ?>
 
-<section class="book-review__listing">
+<section class="page-wrapper">
+<h2 class="page-title">Book Reviews</h2>
+
+<section class="book-review__listing grid">
 
 <?php
 if(have_posts()): while($loop->have_posts()): $loop->the_post();
@@ -22,11 +25,12 @@ $featured_image = $post_image ?
   '';
 ?>
 
-<article class="book-review__listing--item">
+<article class="book-review__listing--item grid_col col-3">
   <a href="<?php the_permalink(); ?>"><?php the_title(); ?>
     <h2 class="author"><?php echo get_the_terms(get_the_ID(), 'author')[0]->name; ?></h2>
+    <p class="genre"><?php echo get_the_terms(get_the_ID(), 'genres')[0]->name ?></p>
     <div class="listing--image" style="<?php echo $featured_image; ?>"></div>
-    <?php the_excerpt(); ?>
+    <!-- <?php the_excerpt(); ?> -->
   </a>
 </article>
 
@@ -37,6 +41,7 @@ endwhile; else:
 endif;
 ?>
 
+</section>
 </section>
 
 <?php

@@ -3,9 +3,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 40px;
+  max-width: 1300px;
 
   &--item {
+    padding-bottom: 40px;
+
     a {
       color: $white;
       font-family: $_raleway;
@@ -17,6 +19,10 @@
     .author {
       color: $finn;
       font-size: 18px;
+    }
+
+    .genre {
+      color: $tutara;
     }
 
     .listing--image {
