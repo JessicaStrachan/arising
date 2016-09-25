@@ -25,7 +25,7 @@ if(have_posts()): while(have_posts()): the_post();
     <?php if($content); ?>
     <p><?php echo the_content(); ?></p>
     <section class="post-images grid">
-      <a href="<?php echo $review_image_one ?>" style="<?php echo $image_one"></a>
+      <a href="<?php echo $review_image_one ?>" style="<?php echo $image_one?>"></a>
     </section>
   </article>
 </div>
