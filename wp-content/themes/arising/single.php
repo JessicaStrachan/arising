@@ -7,11 +7,16 @@ $featured_image = $post_image ?
   'background-image: url(' . $post_image . ');' :
   '';
 
+$review_image_fields = new CMB2Fields(get_the_ID());
+
+$review_image_one = $review_image_fields->field('review_image_one');
+$image_one = 'background-image: url(' . $review_image_one . ');' ;
+
 get_header();
 
 if(have_posts()): while(have_posts()): the_post();
 ?>
-<div class="single--post__wrapper">
+<div class="page-wrapper">
   <section class="page--title">
     <h1><?php echo the_title(); ?></h1>
   </section>
@@ -19,6 +24,9 @@ if(have_posts()): while(have_posts()): the_post();
   <article>
     <?php if($content); ?>
     <p><?php echo the_content(); ?></p>
+    <section class="post-images grid">
+      <a href="<?php echo $review_image_one ?>" style="<?php echo $image_one"></a>
+    </section>
   </article>
 </div>
 

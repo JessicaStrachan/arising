@@ -15,5 +15,20 @@ if(file_exists(__DIR__ . '/CMB2/init.php')) {
 }
 function cmb2_exst_metaboxes() {
   $prefix = '_arising_cmb2_';
+
+  $review_image_one = new_cmb2_box([
+    'id'            => 'review_image_one',
+    'title'         => __('Post Image One', 'cmb2'),
+    'object_types'  => ['post'],
+    'context'       => 'normal',
+    'priority'      => 'high',
+    'show_names'    => true
+  ]);
+
+  $review_image_one->add_field([
+    'desc'       => __('Add the first post image', 'cmb2'),
+    'id'         => $prefix . 'review_image_one',
+    'type'       => 'file'
+  ]);
 }
 add_action('cmb2_init', 'cmb2_arising_metaboxes');
