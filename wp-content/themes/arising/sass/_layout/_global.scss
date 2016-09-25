@@ -55,7 +55,8 @@ body {
   }
 }
 
-.page-wrapper {
+.page-wrapper,
+.section-wrapper {
   padding: 40px;
 }
 
@@ -72,7 +73,8 @@ h2 {
   font-weight: 900;
 }
 
-.page-title {
+.page-title,
+.section-title {
   color: $finn;
   margin-bottom: 40px;
   text-align: center;
