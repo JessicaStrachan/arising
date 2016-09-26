@@ -7,21 +7,21 @@
   Description: Arising theme created by Jess Madeline
 */
 
-@import 'compass';
-@import 'compass/reset';
+@import 'compass',
+        'compass/reset';
 
-@import '_tools/variables';
-@import '_tools/mixins';
+@import '_tools/variables',
+        '_tools/mixins';
 
-@import '_layout/global';
-@import '_layout/gridz';
-@import '_layout/nav-menu';
-@import '_layout/footer';
-@import '_layout/single';
-@import '_layout/listing';
+@import '_layout/global',
+        '_layout/gridz',
+        '_layout/nav-menu',
+        '_layout/footer',
+        '_layout/single',
+        '_layout/listing';
 
 @import '_partials/wordpress-core';
 
-@import '_templates/header';
-@import '_templates/introduction';
-@import '_templates/featured-blog-posts';
+@import '_templates/header',
+        '_templates/introduction',
+        '_templates/featured-blog-posts';
