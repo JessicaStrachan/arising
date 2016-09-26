@@ -57,7 +57,12 @@ body {
 
 .page-wrapper,
 .section-wrapper {
-  padding: 40px;
+  margin: 0 40px;
+  padding: 40px 0;
+}
+
+.section-wrapper {
+  border-bottom: 1px solid $finn;
 }
 
 h1,

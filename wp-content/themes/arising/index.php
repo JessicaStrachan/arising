@@ -10,6 +10,7 @@ get_header();
 
 <section class="page-wrapper">
   <h2 class="page-title">Book Reviews</h2>
+  <section class="book-review__listing grid">
 
   <?php
   if(have_posts()): while($loop->have_posts()): $loop->the_post();
@@ -23,7 +24,6 @@ get_header();
     '';
   ?>
 
-  <section class="book-review__listing grid">
 
   <article class="book-review__listing--item grid_col col-3">
     <a href="<?php the_permalink(); ?>"><?php the_title(); ?>
