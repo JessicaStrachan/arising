@@ -1,0 +1,41 @@
+.featured-blog__listing {
+  @include horizontal-center(relative);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1300px;
+
+  &--item {
+    padding-bottom: 40px;
+    width: 50%;
+
+    a {
+      color: $white;
+      font-family: $_raleway;
+      font-size: 25px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .time {
+      color: $finn;
+      font-size: 18px;
+    }
+
+    .listing--image {
+      background-position: center center;
+      background-size: cover;
+      height: 360px;
+      margin: 20px 0;
+      width: 360px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  &--item:nth-child(3n+2) {
+    margin: 0 20px;
+  }
+}

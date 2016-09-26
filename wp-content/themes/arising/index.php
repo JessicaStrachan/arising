@@ -9,39 +9,39 @@ get_header();
 ?>
 
 <section class="page-wrapper">
-<h2 class="page-title">Book Reviews</h2>
+  <h2 class="page-title">Book Reviews</h2>
+  <section class="book-review__listing grid">
 
-<section class="book-review__listing grid">
+  <?php
+  if(have_posts()): while($loop->have_posts()): $loop->the_post();
 
-<?php
-if(have_posts()): while($loop->have_posts()): $loop->the_post();
-
-$post_image = wp_get_attachment_image_src(
-  get_post_thumbnail_id(),
-  'full'
-)[0];
-$featured_image = $post_image ?
-  'background-image: url(' . $post_image . ');' :
-  '';
-?>
-
-<article class="book-review__listing--item grid_col col-3">
-  <a href="<?php the_permalink(); ?>"><?php the_title(); ?>
-    <h2 class="author"><?php echo get_the_terms(get_the_ID(), 'author')[0]->name; ?></h2>
-    <p class="genre"><?php echo get_the_terms(get_the_ID(), 'genres')[0]->name ?></p>
-    <div class="listing--image" style="<?php echo $featured_image; ?>"></div>
-    <!-- <?php the_excerpt(); ?> -->
-  </a>
-</article>
+  $post_image = wp_get_attachment_image_src(
+    get_post_thumbnail_id(),
+    'full'
+  )[0];
+  $featured_image = $post_image ?
+    'background-image: url(' . $post_image . ');' :
+    '';
+  ?>
 
 
-<?php
-endwhile; else:
-  echo 'Sorry, no posts matched your criteria';
-endif;
-?>
+  <article class="book-review__listing--item grid_col col-3">
+    <a href="<?php the_permalink(); ?>"><?php the_title(); ?>
+      <h2 class="author"><?php echo get_the_terms(get_the_ID(), 'author')[0]->name; ?></h2>
+      <p class="genre"><?php echo get_the_terms(get_the_ID(), 'genres')[0]->name ?></p>
+      <div class="listing--image" style="<?php echo $featured_image; ?>"></div>
+      <!-- <?php the_excerpt(); ?> -->
+    </a>
+  </article>
 
-</section>
+
+  <?php
+  endwhile; else:
+    echo 'Sorry, no posts matched your criteria';
+  endif;
+  ?>
+
+  </section>
 </section>
 
 <?php
