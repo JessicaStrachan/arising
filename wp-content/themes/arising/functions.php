@@ -19,6 +19,11 @@ add_theme_support('html5', ['comment-list', 'comment-form', 'search-form']);
 add_theme_support('automatic-feed-links');
 add_theme_support('post-thumbnails');
 
+register_nav_menus([
+  'main_nav' => 'Main navigation menu - located in the header',
+  'footer-nav' => 'Footer navigation menu - located in the footer'
+]);
+
 function autoload_classes($name) {
   $template_directory = get_template_directory();
 
