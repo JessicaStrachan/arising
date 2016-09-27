@@ -29,11 +29,5 @@
 </section>
 
 <div class="nav-menu__container js-nav-menu">
-  <nav class="nav-menu">
-    <a class="nav-menu__item" href="#"><span data-hover="Home">Home</span></a>
-    <a class="nav-menu__item" href="#"><span data-hover="Portfolio">Portfolio</span></a>
-    <a class="nav-menu__item" href="#"><span data-hover="Blog">Blog</span></a>
-    <a class="nav-menu__item" href="#"><span data-hover="Book Reviews">Book Reviews</span></a>
-    <a class="nav-menu__item" href="#"><span data-hover="Contact">Contact</span></a>
-  </nav>
+  <?php wp_nav_menu(['theme_location' => 'main_nav', 'container' => '']); ?>
 </div>
