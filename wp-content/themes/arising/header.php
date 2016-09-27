@@ -11,9 +11,13 @@
 </head>
 <body <?php body_class(); ?>>
 
+  <?php
+  $home_link = get_site_url();
+  ?>
+
 <section class="header">
   <div class="header-name">
-      <h2>Jessica Strachan</h2>
+      <h2><a href="<?php echo $home_link; ?>">Jessica Strachan</a></h2>
   </div>
   <div class="header-social-media">
       <ul>
