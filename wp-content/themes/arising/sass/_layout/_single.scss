@@ -1,9 +1,12 @@
 .single--post__wrapper {
+  @include horizontal-center(relative);
   margin: 0 40px;
+  max-width: 1000px;
   padding: 40px 0;
 
   .page--title {
-    padding-bottom: 20px;
+    padding-bottom: 40px;
+    text-align: center;
 
     h1 {
       color: $finn;
@@ -13,13 +16,29 @@
   }
 
   .featured--image {
+    @include horizontal-center(relative);
     background-position: center center;
     background-size: cover;
-    height: 200px;
-    width: 200px;
+    height: 400px;
+    margin-bottom: 40px;
+    width: 920px;
   }
 
-  article p {
-    color: $white;
+  article {
+    border-bottom: 1px $finn solid;
+    border-top: 1px $finn solid;
+    padding: 40px 0;
+
+    .page-subtitle {
+      color: $white;
+      font-size: 18px;
+      font-weight: 700;
+      padding-bottom: 20px;
+    }
+
+    p {
+      color: $white;
+      font-size: 16px;
+    }
   }
 }
