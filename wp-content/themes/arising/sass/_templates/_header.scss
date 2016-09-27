@@ -12,8 +12,9 @@
   padding: 40px 0 30px;
   position: relative;
 
-  &-name h2 {
+  &-name a {
     color: $white;
+    text-decoration: none;
   }
 
   &-social-media {
