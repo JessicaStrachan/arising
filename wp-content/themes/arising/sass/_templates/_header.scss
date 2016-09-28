@@ -13,8 +13,13 @@
   position: relative;
 
   &-name a {
+    @include transition(opacity $global-transition-timing);
     color: $white;
     text-decoration: none;
+
+    &:hover {
+      opacity: .6;
+    }
   }
 
   &-social-media {
