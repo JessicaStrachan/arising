@@ -8,4 +8,4 @@ get_template_part('templates/introduction', 'tpl');
 
 get_template_part('templates/featured-blog-posts', 'tpl');
 
-get_template_part('templates/footer', 'tpl');
+get_footer();
