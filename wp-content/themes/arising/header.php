@@ -21,10 +21,10 @@
   </div>
   <div class="header-social-media">
       <ul>
-          <li><a href="#">Github</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Pinterest</a></li>
+          <li><a href="https://github.com/JessicaStrachan" target="_blank">Github</a></li>
+          <li><a href="https://twitter.com/JessMadeline" target="_blank">Twitter</a></li>
+          <li><a href="https://www.instagram.com/jessmadelinexo/?hl=en" target="_blank">Instagram</a></li>
+          <li><a href="https://linkedin.com/in/jessica-strachan-8aa853105" target="_blank">LinkedIn</a></li>
       </ul>
   </div>
   <div class="menu-icon js-menu-icon">
