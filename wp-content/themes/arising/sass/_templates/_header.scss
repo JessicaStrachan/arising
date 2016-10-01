@@ -38,13 +38,18 @@
       color: $white;
 
       a {
-        color: $white;
+        color: $chicago;
         font-family: $link-font;
         text-decoration: none;
+        transition: opacity .3s;
+
+        &:hover {
+          opacity: .6;
+        }
       }
 
       &::after {
-        color: $white;
+        color: $finn;
         content: '//';
         padding: 5px;
       }
